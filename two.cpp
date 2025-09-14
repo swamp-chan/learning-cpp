@@ -1,11 +1,13 @@
 //control structure and function
 #include <iostream>
 #include <cstdlib>
+#include <vector>
+#include <string>
 using namespace std;
 
 void geometricsequence();
 void checkage();
-void infinite();
+void zero_game();
 void numberguessinggame();
 void correspondingday();
 void menu();
@@ -26,7 +28,7 @@ int main(){
 				checkage();
 			break;
 			case 3:
-				infinite();
+				zero_game();
 			break;
 			case 4:
 				numberguessinggame();
@@ -48,7 +50,7 @@ void menu(){
 	cout<<"3. Infinite loop until 0 is entered"<<endl;
 	cout<<"4. Number guessing \"game\""<<endl;
 	cout<<"5. Corresponding day"<<endl;
-	cout<<"Any key to exit."<<endl;
+	cout<<"~Press any other key to exit.~"<<endl;
 	cout<<endl;
 }
 
@@ -57,14 +59,49 @@ void geometricsequence(){
 	cout<<"geometric sequence"<<endl;
 	cout<<"\nenter first term, ratio and no. of terms(a, r, n): "<<endl;
 	cin >>  first_term >>  ratio >>  n_term;
+	cout<<"\nSequence: "<<endl;
 	for(int i = 0; i<n_term; i++){
 		cout << first_term << endl;
 		first_term *= ratio;
 	}
+	cout<<endl;
 	system("pause");
 }
-void checkage(){}
-void infinite(){}
+void checkage(){
+	int age;
+label_1:
+	cout << "Enter your age: ";
+	cin >> age;
+	cout << endl;
+	if(age<1 ||  age>164){
+		cout<<"Stop playing with me twin" << endl;
+		goto label_1;
+	}else if(age<18){
+		cout<< "You a minor, stay safe twin"<<endl;
+	}else if(age>=18 && age<30){
+		cout<<"You young twin lock in twin"<<endl;
+	}else if(age>=30 && age<60){
+		cout<<"unc 😂😂"<<endl;
+	}else{
+		cout<<"granny"<<endl;
+	}
+	cout<<endl;
+	system("pause");
+}
+void zero_game (){
+	int user_choice;
+	int counter;
+	vector<string> dialogue = {"You think im joking twin?", "Lock in twin ts aint you", "ts aint it gng", "it cant be that hard gng", "ts aint it twin ts aint it", "Twin can yo not even follow a simple instruction"};
+	string win_msg = "You did it twin good j*b";
+	string defeat_msg = "Womp womp you loose twin";
+
+	cout<<"Enter 0 to win the game!"<<endl;
+	cin >> user_choice;
+	while(counter<10){
+		
+	}
+}
+
 void numberguessinggame(){}
 void correspondingday(){}
 
