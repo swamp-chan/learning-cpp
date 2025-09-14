@@ -13,6 +13,6 @@ I wanted to get into CP(Competitive Programming😃) and C++ is a must for that 
 <div align = "center"> 
 <h3>two.cpp</h3>
   <p align = "left">
-    Menu drivern program to revisit the basics. This program includes review of basic syntax, data types and loops etc. Tried some C++ features(?) as well like vectors. Syntax is very similar to C relatively low differences(as of now, atleast for the simple programs😔). Loved the vector data structure AND THE STRING, so much easier and less of a pain to deal with than arrays in C.
+    Menu driven program to revisit the basics. This program includes review of basic syntax, data types and loops etc. Tried some C++ features(?) as well like vectors. Syntax is very similar to C, relatively little differences(as of now, atleast for the simple programs😔). Loved the vector data structure AND THE STRING, so much easier and less of a pain to deal with than arrays in C.
   </p>
 </div>
