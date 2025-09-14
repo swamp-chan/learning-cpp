@@ -90,16 +90,28 @@ label_1:
 }
 void zero_game (){
 	int user_choice;
-	int counter;
+	int counter = 0;
+	int tries;
 	vector<string> dialogue = {"You think im joking twin?", "Lock in twin ts aint you", "ts aint it gng", "it cant be that hard gng", "ts aint it twin ts aint it", "Twin can yo not even follow a simple instruction"};
 	string win_msg = "You did it twin good j*b";
 	string defeat_msg = "Womp womp you loose twin";
 
 	cout<<"Enter 0 to win the game!"<<endl;
-	cin >> user_choice;
-	while(counter<10){
-		
+	cout<<"Enter how many tried you want: ";
+	cin >> tries;
+	cout<<"ENTER 0: "<<endl;
+	while(counter<tries && user_choice != 0){
+		if(counter>0)cout<<dialogue[counter%6] << endl;
+		cin >> user_choice;
+		counter++;
 	}
+	if(user_choice == 0){
+		cout<<"\n"<<win_msg;
+	}else{
+		cout<<"\n"<<defeat_msg;
+	}
+	cout<<endl;
+	system("pause");
 }
 
 void numberguessinggame(){}
