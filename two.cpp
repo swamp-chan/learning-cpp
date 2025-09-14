@@ -1,8 +1,10 @@
 //control structure and function
+
 #include <iostream>
 #include <cstdlib>
 #include <vector>
 #include <string>
+#include <ctime>
 using namespace std;
 
 void geometricsequence();
@@ -114,7 +116,55 @@ void zero_game (){
 	system("pause");
 }
 
-void numberguessinggame(){}
-void correspondingday(){}
+void numberguessinggame(){
+	srand(time(0));
+	int tobeguessed;
+	int range;
+	int guess;
+	int counter = 0;
+	int tries_;
+	vector<string> nice_message = {"Nice try twin but you are wrong", "WROOONG", "Try again ;3"};
+	
+	cout<<"Enter maximum number(range)(minimum is 0):";
+	cin>>range;
+	cout << "Enter no. of tries: ";
+	cin>>tries_;
+	tobeguessed = rand() % range;
+
+	cout<<"\nBEGIN GUESSING:"<<endl;
+	while(guess != tobeguessed && counter<tries_){
+		if(counter!=0) cout<<nice_message[counter%3]<<endl;
+		cin>>guess;
+		counter++;
+	}
+	cout<<endl;
+	if(guess == tobeguessed){
+		cout<<"good j*b twin"<<endl;
+	}else {
+		cout<<"oof you loose twin the random number was: " << tobeguessed << endl;
+	}
+	cout<<endl;
+	system("pause");
+
+}
+
+void correspondingday(){
+	int option_dayno;
+	vector<string> days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+label_2:
+	cout<<"Enter number 1-7 and the corresponding day shall be printed"<<endl;
+	cout<<"Day: ";
+	cin>>option_dayno;
+
+	if(option_dayno>7 || option_dayno<1){
+		cout<<"Stop playing with me twin"<<endl;
+		goto label_2;
+	}
+	else{
+		cout << days[option_dayno] << endl;
+	}
+	cout<<endl;
+	system("pause");
+}
 
 
