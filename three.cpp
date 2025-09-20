@@ -1,14 +1,16 @@
 
 #include <iostream>
-#include <vectors>
+#include <vector>
 #include <iterator>
 #include <algorithm>
 #include <cstdlib>
+#include <string>
 
 using namespace std;
 
 void menu();
-vector<int> fillvector(int arr[], int n);
+vector<int> fillVector(int arr[], int n);
+void iterators();
 
 int main(){
 	do{
@@ -21,27 +23,14 @@ int main(){
 void menu(){
 	system("cls");
 	int opt, n; 
-	cout<<"1. Insert array to vector in same order in array."<<endl;
-	cout<<"2. Different ways to use iterators"<<endl;
+	cout<<"1. Different ways to use iterators"<<endl;
 
 	cin>>opt;
 	switch (opt){
  		case 1:
-			cout<<endl;
-			cout<<"Enter size of array(n): ";
-			cin>>n;
-			int arr[n];
-			cout<<"Enter array:"<<endl;
-			for(int i = 0; i<n; i++){
- 				cin>>arr[i];
-			}
-			vector<int> output = f(arr, n);
-			for(int i = 0; i<0; i++){
- 				cout<<output[i]<<" ";
-			}
-			cout<<endl;
-			system("pause");
-			
+		iterators();
+		break;
+
 	}
 
 }
@@ -56,3 +45,32 @@ vector<int> fillVector(int arr[], int n) {
     
     return f;
 }
+
+void iterators(){
+
+	vector<int> vec1 = {6,7,11,12,14,15};
+	vector<string> vec2 = {"Apple", "Bannana", "SigmaBoy", "Transistor"};
+
+	cout<<"Original Vectors: "<<endl;
+	cout<<"(Printed Using the traditional for loop)"<<endl;
+	for(int i = 0; i<vec1.size(); i++){
+		cout<<vec1[i]<<" ";
+	}
+	cout<<endl;
+	for(int j = 0; j<vec2.size(); j++){
+ 		cout<<vec2[j]<<" ";
+	}
+	cout<<endl;
+	
+	cout<<"(Printed Using raged for loops)"<<endl;
+	for(int i: vec1){
+ 		cout<<i<<" ";
+	}
+	cout<<endl;
+	for(string j:vec2){
+		cout<<j<<" ";
+	}
+	cout<<endl;
+	system("pause");
+}
+
